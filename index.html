@@ -264,20 +264,19 @@ elemento.innerHTML = valor;
                             <h4 class="heading" style="padding-top:1%">Ejemplo 1</h4>
                             <p> En este ejemplo se obtendrá el ID del formulario utilizando HTML DOM y mostrarlo en pantalla.
                             <div class="docs-code-block">
-                                <pre class="shadow-lg rounded"><code class="javascript hljs">function myGeeks() {
-            // Accessing form element.
-            var txt = document.getElementById(
-              "myForm").id;
-           
-            document.getElementById(
-              "Geek_p").innerHTML = txt;
-        }
+                                <pre class="shadow-lg rounded"><code class="javascript hljs">function formsfuncion() {
+    var txt = document.getElementById(
+      "idformulario1").id;
+
+    document.getElementById(
+      "forms1").innerHTML = txt;
+}
 </code></pre>
                             </div>
                             <!--//docs-code-block-->
                             <h3>Demo</h3>               
                             <form align="center"
-                                  id="myForm"
+                                  id="idformulario1"
                                   method="GET"
                                   target="_blank"
                                   action="/action_page.php">
@@ -298,7 +297,7 @@ elemento.innerHTML = valor;
                             <button onclick="formsfuncion()">
                                 Submit
                             </button>
-                            <p id="idformulario1"
+                            <p id="forms1"
                                style="color:green;
                                       font-size:30px;">
                             </p>
