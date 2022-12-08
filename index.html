@@ -75,15 +75,13 @@
             <nav id="docs-nav" class="docs-nav navbar">
                 <ul class="section-items list-unstyled nav flex-column pb-3">
                     <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
-                                class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Efectos de
-                            jQuery</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Hide and Show</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Fade</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Slide</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">Animate</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-5">stop()</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-6">Callback</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-7">Chaining</a></li>
+                                class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>DOM</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">DOM Métodos</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">DOM Document</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">DOM Elements</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">DOM HTML</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-5">DOM Forms</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-6">DOM CSS</a></li>
                 </ul>
 
             </nav>
@@ -94,81 +92,67 @@
             <div class="container">
                 <article class="docs-article" id="section-1">
                     <header class="docs-header">
-                        <h1 class="docs-heading">Introducción <span class="docs-time">Última Actualización
-                                07/12/2022</span></h1>
+                        <h1 class="docs-heading">DOM Intro <span class="docs-time">Última Actualización
+                                08/12/2022</span></h1>
                         <section class="docs-intro">
-                            <p>jQuery permite agregar efectos a un sitio web de forma sencilla. Cada uno de los efectos
-                                poseen una configuración por defecto, sin embargo, es posible editar los parámetros
-                                personalizados para poder realizar diseños a medida. </p>
+                            <p>HTML DOM (Document Object Model) hace referencia al modelo de objetos del documento en el momento en que se carga una página web. Este modelo es construido a partir de un árbol de objetos, y cada objeto permite modelar tanto la ventana propia del navegador, la página web, el historial de navegación, así como cualquier elemento HTML. El DOM permite ser accedido a través de JavaScript, para poder crear, modificar, o eliminar elementos utilizando código de programación.
+                            </p>
+                            <br>
+                            <p>DOM o Document Object Model es un conjunto de utilidades específicamente diseñadas para manipular documentos XML. Por extensión, DOM también se puede utilizar para manipular documentos XHTML y HTML. Técnicamente, DOM es una API de funciones que se pueden utilizar para manipular las páginas XHTML de forma rápida y eficiente.</p>
+
+                            <br>
+                            <p>Antes de poder utilizar sus funciones, DOM transforma internamente el archivo XML original en una estructura más fácil de manejar formada por una jerarquía de nodos. De esta forma, DOM transforma el código XML en una serie de nodos interconectados en forma de árbol. El árbol generado no sólo representa los contenidos del archivo original (mediante los nodos del árbol) sino que también representa sus relaciones (mediante las ramas del árbol que conectan los nodos).</p>
+                            <br>
+                            <p>Aunque en ocasiones DOM se asocia con la programación web y con JavaScript, la API de DOM es independiente de cualquier lenguaje de programación. De hecho, DOM está disponible en la mayoría de lenguajes de programación comúnmente empleados. </p>
+
+                            <img src="images/dom-1.jpg" class="img-fluid img-thumbnail">
+                            <p>Al estar "amparado" por un lenguaje de programación, todas estas tareas se pueden automatizar, incluso indicando que se realicen cuando el usuario haga acciones determinadas, como por ejemplo: pulsar un botón, mover el ratón, hacer click en una parte del documento, escribir un texto, etc...</p>
+
+                            <p>Pero, ¿quién define la forma en la que DOM debe funcionar en los navegadores y motores web? Se trata del W3C o World Wide Web Consortium, que además maneja otros sistemas. El W3C es una entidad internacional, creada en 1994 por Tim Berners-Lee, el padre de la Internet; que desarrolla padrones abiertos, asegurando el crecimiento de la web. Dentro de la entidad existe un grupo llamado Web Platform Working Group, responsable por DOM. La W3C es responsable por diversos otros padrones, protocolos y lenguajes, como:
+                            CSS;
+                            HTML;
+                            XML;
+                            SVJ.
+                            
                         </section>
-                        <!--//docs-intro-->
-
-                        <div class="docs-code-block">
-                            <pre class="shadow-lg rounded"><code class="javascript hljs">$(document).ready(function(){
-    $("#hide").on('click', function() {
-        $("#element").hide();
-        return false;
-    });
- 
-    $("#show").on('click', function() {
-        $("#element").show();
-        return false;
-    });
-});
-</code></pre>
-
-                        </div>
-                        <!--//docs-code-block-->
                     </header>
 
-                    <div id="content" class="col-lg-12">
-                        <div id="elemento1" class="col-lg-12" style="display: none;">
-                            <div id="close"><a class="btn btn-small" href="#" id="hide" title="Cerrar"><i
-                                        class="fa fa-close"></i></a></div>
-                            <h2>Texto de Prueba</h2>
-                            <p>El efecto show permite mostrar algún elemento HTML.</p>
-                        </div>
-                    </div>
-                    <p><button class="btn btn-primary" id="show"><i class="fa fa-eye"></i> Mostrar</button></p>
-
                     <section class="docs-section" id="item-1-1">
-                        <h2 class="section-heading">Hide and Show</h2>
-
-                        <p>jQuery permite mostrar y ocultar elementos de HTML utilizando los métodos show() y hide().
+                        <h2 class="section-heading">Métodos HTML DOM</h2>
+                        <p>Las propiedades de HTML DOM son valores que representan elementos que pueden ser accedidos o modificados, en cambio los métodos son las acciones que intervienen para modificar dichos parámetros.</p>
+                        <p> HTML DOM permite modificar los siguientes parámetros.</p>
+                        <p>Window: el objeto window es un objeto del navegador que siempre está en la parte superior de la jerarquía. Es como una API que se utiliza para configurar y acceder a todas las propiedades y métodos del navegador. Es creado automáticamente por el navegador. </p>
+                        <p>Document: cuando se carga un documento HTML en una ventana, se convierte en un objeto documento. El objeto document tiene varias propiedades que hacen referencia a otros objetos que permiten acceder y modificar el contenido de la página web. Si es necesario acceder a cualquier elemento en una página HTML, siempre comenzamos accediendo al objeto 'document'.</p>
+                        <p>Form: está representado por etiquetas de formulario . </p>
+                        <p>Link: está representado por etiquetas de enlace . </p>
+                        <p>Anchor: está representado por etiquetas href.</p>
+                        <p>Form Control Element: el formulario puede tener muchos elementos de control, como campos de texto, botones, botones de radio, casillas de verificación, etc. </p>
+                        <p>Además, para acceder y modificar dichos parámetros se utilizan diferentes métodos o funciones. Los métodos disponibles son:</p>
+                        <p>write (“string”): Escribe la cadena dada en el documento.</p>
+                        <p>getElementById(): devuelve el elemento que tiene el valor de identificación dado.</p>
+                        <p>getElementsByName(): devuelve todos los elementos que tienen el valor del nombre dado.</p>
+                        <p>getElementsByTagName(): devuelve todos los elementos que tienen el nombre de etiqueta dado.</p>
+                        <p>getElementsByClassName(): devuelve todos los elementos que tienen el nombre de clase dado.</p>
                         </p>
-                        <p>Sintaxis: <code>$("p").show();</code></p>
-                        <p>Sintaxis: <code>$("p").hide();</code></p>
-                        <h4 class="heading">Ejemplo 1 show y hide</h4>
+                        <h4 class="heading">Ejemplo 1</h4>
                         <div class="docs-code-block">
-                            <pre class="shadow-lg rounded"><code class="javascript hljs">$(document).ready(function(){
-    $(".hide-btn").click(function(){
-        $(".e2").hide();
-    });
-    
-    $(".show-btn").click(function(){
-        $(".e3").show();
-    });
-});
+                            <pre class="shadow-lg rounded"><code class="html hljs">function mostrarimg(){
+document.getElementById('cont2').innerHTML='&ltimg src="images/firefox.png"&gt';
+}
 </code></pre>
 
                         </div>
                         <!--//docs-code-block-->
                         <h3>Demo</h3>
-                        <p class="e3" style="display: none;">El efecto show permite mostrar algún elemento HTML.</p>
-                        <p class="e2">El efecto hide permite ocultar algún elemento HTML.</p>
-                        <button type="button" class="btn btn-primary hide-btn"><i class="fa fa-eye"></i>
-                            Ocultar</button>
-                        <button type="button" class="btn btn-primary show-btn"><i class="fa fa-eye"></i>Mostrar</button>
-                        <button type="button" class="btn btn-primary reset-btn"><i
-                                class="fa fa-eye"></i>Reiniciar</button>
-
-                        <h4 class="heading" style="padding-top:1%">Ejemplo 2</h4>
+                        <div id="cont2"></div>
+                        <button type="button" onclick="mostrarimg()">Mostrar foto</button>
+                        <h4 class="heading" style="padding-top:1%">getElementByID</h4>
                         Hide y Show permiten agregar parámetros adicionales que modifican su compartamiento. La
                         velocidad permite definir qué tan rápido será la animación, medida en milisegundos, o utilizando
                         los valores de "slow", "normal" o "fast". Callback es un parámetro opcional para volver a llamar
                         la función una vez ha terminado una operación completa.
-                        <p>Sintaxis: <code>$("p").show(velocidad,callback);</code></p>
-                        <p>Sintaxis: <code>$("p").hide(velocidad,callback);
+                        <p>Sintaxis: <code>document.getElementById("demo");</code></p>
+                        
 
 </code></p>
                         <div class="docs-code-block">
@@ -188,11 +172,8 @@
                         <!--//docs-code-block-->
                         <h3>Demo</h3>
 
-                        <img width="250" src="images/services-bg.jpg" class="target">
-
-                        <input type="button" id="ocultar" name="boton2" value="Ocultar Imagen">
-                        <input type="button" id="mostrar" name="boton1" value="Mostrar imagen">
-
+                        <h1 id="grupo">Grupo 03</h1>
+                        <input type="button" onclick="grupo()" value="Click aquí para cambiar de color el texto" />
                         <div class="callout-block callout-block-info">
 
                             <div class="content">
@@ -203,515 +184,174 @@
                                     <!--//icon-holder-->
                                     Nota
                                 </h4>
-                                <p>Si un elemento se oculta con hide, se debe utilizar show para volver a mostrarlo. y
-                                    viceversa. En
-                                    cambio, Toggle permite alternar entre show y hide a la vez.</p>
+                                <p>El ID es una cadena que distingue entre mayúsculas y minúsculas y es única dentro del documento; solo un elemento puede tener un ID dado.</p>
                             </div>
                             <!--//content-->
                         </div>
-                        <!--//callout-block-->
-                        <h2 class="section-heading">Toggle</h2>
-                        <p>Toggle es un método de jQuery que permite alternar entre mostrar y ocultar un elemento HTML.
-                        </p>
-                        <p>Sintaxis: <code>$("p").toggle();</code></p>
-                        <h4 class="heading">Ejemplo</h4>
-                        <div class="docs-code-block">
-                            <pre class="shadow-lg rounded"><code class="javascript hljs">$(document).ready(function(){
-  $(".toggle-btn").click(function(){
-    $("e4").toggle();
-  });
-});
-</code></pre>
-
-                        </div>
-                        <!--//dosc-code-block-->
-                        <h3>Demo</h3>
-                        <p class="e4" style="display: none;">El efecto toggle permite mostrar y ocultar algún elemento
-                            HTML.</p>
-                        <button type="button" class="toggle-btn">Mostrar/Ocultar</button>
-
-                        <div class="callout-block callout-block-info">
-
-                            <div class="content">
-                                <h4 class="callout-title">
-                                    <span class="callout-icon-holder me-1">
-                                        <i class="fas fa-info-circle"></i>
-                                    </span>
-                                    <!--//icon-holder-->
-                                    Nota
-                                </h4>
-                                <p>Si un elemento se oculta con hide, se debe utilizar show para volver a mostrarlo, y
-                                    viceversa. En
-                                    cambio, Toggle permite alternar entre show y hide a la vez.</p>
-                            </div>
-                            <!--//content-->
-                        </div>
-                        <!--//callout-block-->
+                        </section>
 
                         <section class="docs-section" id="item-1-2">
-                            <h2 class="section-heading">Fade</h2>
-                            <p>Fade es un efecto de animación que permite dismininuir o aumentar la opacidad de un
-                                elemento.</p>
+                            <h2 class="section-heading">DOM Document</h2>
+                            <p>Document es un objeto de HTML DOM, considerado como nodo padre de todos los demás objetos que existen en un sitio web. Dado que el modelo DOM se muestra como un grafo, específicamente de tipo árbol, dónde el nodo raíz es el nodo document, se debe acceder primero a este objeto para poder acceder a todos los demás.</p>
 
-                            <p>Existen cuatro tipos de Fade en jQuery: fadeIn, fadeOut, fadeToggle, y fadeTo</p>
-                            <p></p>
-                            <p><strong>FadeIn</strong> permite fundir un elemento desde la opacidad mínima hasta la
-                                máxima opacidad.
-                            <p>Sintaxis: <code>$("p").fadeIn( [velocidad, callback] );
-</code></p>
-                            <p><strong>FadeOut</strong> permite fundir un elemento desde la opacidad máxima hasta la
-                                mínima opacidad.
-                            <p>Sintaxis: <code>$("p").fadeOut( [velocidad, callback] );</code></p>
-
-                            <p><strong>FadeToggle</strong> permite fundir un elemento desde la opacidad máxima hasta la
-                                mínima opacidad, y luego alternar fundiendo el elemento desde la opacidad mínima hasta
-                                la máxima opacidad, o viceversa.
-                            <p>Sintaxis: <code>$("p").fadeToggle( [velocidad, callback] );</code></p>
-
-                            <p><strong>FadeTo</strong> permite fundir un elemento hasta una opacidad determinada.
-                            <p>Sintaxis: <code>$("p").fadeTo( [velocidad, opacidad, callback] );</code></p>
-
-                            <p>FadeIn, FadeOut, FadeToggle, y FadeTo permiten agregar parámetros adicionales que
-                                modifican su compartamiento. La
-                                velocidad permite definir qué tan rápido será la animación, medida en milisegundos, o
-                                utilizando los valores de "slow", "normal" o "fast". Callback es un parámetro opcional
-                                para volver a llamar
-                                la función una vez ha terminado una operación completa.
-                            </p>
-
-                            <h4 class="heading" style="padding-top:1%">Ejemplo 1</h4>
+                            <h4 class="heading" style="padding-top:1%">Ejemplo</h4>
 
                             <div class="docs-code-block">
-                                <pre class="shadow-lg rounded"><code class="javascript hljs">$(document).ready(function() {
-    $("#mostrar5").click(function(event) {
-        $("#rectangulo").fadeIn();
-    });
-    $("#mostrar6").click(function(event) {
-        $("#rectangulo").fadeIn(4000);
-    });
-    $("#mostrar7").click(function(event) {
-        $("#rectangulo").fadeIn(4000, function() {
-            alert ('Efecto fadeIn terminado!');
-            });
-    });
-    $("#ocultar5").click(function(event) {
-        $("#rectangulo").fadeOut();
-    });
-    $("#ocultar6").click(function(event) {
-        $("#rectangulo").fadeOut(4000);
-    });
-    $("#ocultar7").click(function(event) {
-        $("#rectangulo").fadeOut(4000, function() {
-            alert ('Efecto fadeOut terminado!');
-            });
-    });
-});
+                                <pre class="shadow-lg rounded"><code class="javascript hljs">function myFunction() {
+    var x = document.getElementsByClassName("example");
+    x[0].innerHTML = "Hola Mundo";
+}
 </code></pre>
 
                             </div>
                             <!--//docs-code-block-->
                             <h3>Demo</h3>
-                            <div id="rectangulo2"
-                                style="padding:10px 10px 10px 10px; background-color:#303030; color:#fff;">Rectángulo de
-                                ejemplo, que variará de opacidad</div>
-                            <hr>
-                            <input type="button" id="ocultar5" value="Ocultar con fadeOut()">
-                            <hr>
-                            <input type="button" id="mostrar5" value="Mostrar con fadeIn()">
-
-                            <hr>
-                            <input type="button" id="ocultar6" value="Ocultar fadeOut() en 4000 milisegundos">
-                            <hr>
-                            <input type="button" id="mostrar6" value="Mostrar con fadeIn() en 4000 milisengos">
-
-                            <hr>
-                            <input type="button" id="ocultar7"
-                                value="Ocultar fadeOut() en 4000 milisegundos y callback">
-                            <hr>
-                            <input type="button" id="mostrar7"
-                                value="Mostrar con fadeIn() en 4000 milisengos y callback">
-
-
-                            <h4 class="heading" style="padding-top:1%;">Ejemplo 2 fadeToggle y fadeTo</h4>
-                            <div class="docs-code-block">
-                                <pre class="shadow-lg rounded"><code class="javascript hljs">    $("#opacidad05").click(function(event) {
-        $("#rectangulo").fadeTo("slow",0.5);
-    });
-    $("#opacidad07").click(function(event) {
-        $("#rectangulo").fadeTo("fast",0.7, function() {
-            alert ('Efecto fadeTo terminado!');
-            });
-    });
-    $("#alternar01").click(function(event) {
-        $("#rectangulo").fadeToggle();
-    });
-    $("#alternar02").click(function(event) {
-        $("#rectangulo").fadeToggle(4000);
-    });
-    $("#alternar03").click(function(event) {
-        $("#rectangulo").fadeToggle("fast", function() {
-            alert ('Efecto fadeToggle terminado!');
-            });
-    });
-});
-</code></pre>
-
-                            </div>
-                            <!--//docs-code-block-->
-                            <h3>Demo</h3>
-                            <div id="rectangulo"
-                                style="padding:10px 10px 10px 10px; background-color:#303030; color:#fff;">Rectángulo de
-                                ejemplo, que variará de opacidad</div>
-                            <hr>
-                            <input type="button" id="opacidad05"
-                                value="Asignar un 0.5 de opacidad con fadeTo() con duración 'slow'">
-                            <hr>
-
-                            <input type="button" id="opacidad07"
-                                value="Asignar un 0.7 de opacidad con fadeTo() con duración 'fast' con callback">
-                            <hr>
-                            <input type="button" id="alternar01" value="Alternar opacidad con con fadeToggle()">
-                            <hr>
-                            <input type="button" id="alternar02"
-                                value="Alternar opacidad durante 4000 milisengos con fadeToggle()">
-                            <hr>
-                            <input type="button" id="alternar03"
-                                value="Alternar opacidad con duración 'fast' con fadeToggle() con callback">
-
-                            <div class="callout-block callout-block-info">
-
-                                <div class="content">
-                                    <h4 class="callout-title">
-                                        <span class="callout-icon-holder me-1">
-                                            <i class="fas fa-info-circle"></i>
-                                        </span>
-                                        <!--//icon-holder-->
-                                        Nota
-                                    </h4>
-                                    <p>Si un elemento se oculta con fadeOut, se debe utilizar fadeIn para volver a
-                                        mostrarlo, y viceversa. En
-                                        cambio, fadeToggle permite alternar entre fadeIn y fadeOut a la vez.</p>
-                                </div>
-                                <!--//content-->
-                            </div>
+                            
+                            <div class="example">Elemento DIV con clase Example.</div>
+                            <button onclick="myFunction()">Ejecutar</button>
+                            
 
                         </section>
                         <!--//section-->
 
                         <section class="docs-section" id="item-1-3">
-                            <h2 class="section-heading">Slide</h2>
+                            <h2 class="section-heading">DOM Elements</h2>
 
-                            <p>Slide es un efecto que realiza un desplazamiento de un elemento en alguna dirección.</p>
-
-                            <p>Existen tres tipos de Slide en jQuery: slideDown, slideUp, slideToggle</p>
-                            <p><strong>slideDown</strong> permite deslizar un elemento hacia abajo.
-                            <p>Sintaxis: <code>$("p").slideDown( [velocidad, callback] );
-</code></p>
-                            <p><strong>slideUp</strong> permite deslizar un elemento hacia arriba.
-                            <p>Sintaxis: <code>$("p").slideUp( [velocidad, callback] );
-</code></p>
-
-                            <p><strong>slideToggle</strong> permite alternar entre deslizar un elemento hacia abajo y
-                                deslizar un elemento hacia arriba.
-                            <p>Sintaxis: <code>$("p").slideToggle( [velocidad, callback] );
-</code></p>
-
-                            <p>slideDown, slideUp, slideToggle permiten agregar parámetros adicionales que modifican su
-                                compartamiento. La
-                                velocidad permite definir qué tan rápido será la animación, medida en milisegundos, o
-                                utilizando los valores de "slow", "normal" o "fast". Callback es un parámetro opcional
-                                para volver a llamar
-                                la función una vez ha terminado una operación completa.
-                            </p>
+                            <p>Con JavaScript, es posible manipular elementos, encontrándolos a través de su ID, de su nombre de etiqueta, su nombre de clase, y utilizando selectores CSS.</p>
 
                             <h4 class="heading" style="padding-top:1%">Ejemplo 1</h4>
 
                             <div class="docs-code-block">
-                                <pre class="shadow-lg rounded"><code class="javascript hljs">$(document).ready(function() {
-    $("#down01").click(function(event) {
-        $("#rectangulo3").slideDown();
-    });
-    $("#down02").click(function(event) {
-        $("#rectangulo3").slideDown(4000);
-    });
-    $("#down03").click(function(event) {
-        $("#rectangulo3").slideDown("fast");
-    });
-    $("#down04").click(function(event) {
-        $("#rectangulo").slideDown("fast", function() {
-            alert ('Efecto slideDown con velocidad fast terminado!');
-        });
-    });
-
-    $("#up01").click(function(event) {
-        $("#rectangulo3").slideUp();
-    });
-    $("#up02").click(function(event) {
-        $("#rectangulo3").slideUp(4000);
-    });
-    $("#up03").click(function(event) {
-        $("#rectangulo3").slideUp("slow");
-    });
-    $("#up04").click(function(event) {
-        $("#rectangulo3").slideUp("slow", function() {
-            alert ('Efecto slideUp con velocidad slow terminado!');
-        });
-    });
-
-    $("#toggle01").click(function(event) {
-        $("#rectangulo3").slideToggle();
-    });
-    $("#toggle02").click(function(event) {
-        $("#rectangulo3").slideToggle(4000);
-    });
-    $("#toggle03").click(function(event) {
-        $("#rectangulo").slideToggle("slow", function() {
-            alert ('Efecto slideToggle con velocidad slow terminado!');
-        });
-    });
-});
+                                <pre class="shadow-lg rounded"><code class="javascript hljs">function addText() {
+        var para = document.getElementsByName("demoPara");
+        para[0].innerHTML="Texto cambiado!";
+        para[1].innerHTML = "El grupo 03 "
+          + "ha realizado esto con JavaScript";
+    }
 </code></pre>
 
                             </div>
                             <!--//docs-code-block-->
                             <h3>Demo</h3>
-                            <div id="rectangulo3"
-                                style="padding:10px 10px 10px 10px; background-color:#303030; color:#fff;">Rectángulo de
-                                ejemplo</div>
-                            <hr>
-                            <input type="button" id="up01" value="Ocultar con slideUp()">
-                            <hr>
-                            <input type="button" id="down01" value="Mostrar con slideDown()">
-                            <hr>
-                            <input type="button" id="up02" value="Ocultar con slideUp() en 4000 milisegundos">
-                            <hr>
-                            <input type="button" id="down02" value="Mostrar con slideDown() en 4000 milisegundos">
-                            <hr>
-                            <input type="button" id="up03" value="Ocultar con slideUp() con 'slow'">
-                            <hr>
-                            <input type="button" id="down03" value="Mostrar con slideDown() con 'fast'">
-                            <hr>
-                            <input type="button" id="up04" value="Ocultar con slideUp() con 'slow' y callback">
-                            <hr>
-                            <input type="button" id="down04" value="Mostrar con slideDown() con 'fast' y callback">
-                            <hr>
-                            <input type="button" id="toggle01" value="Mostrar / ocultar con slideToggle()">
-                            <hr>
-                            <input type="button" id="toggle02"
-                                value="Mostrar / ocultar con slideToggle() en 4000 milisengos">
-                            <hr>
-                            <input type="button" id="toggle03"
-                                value="Mostrar / ocultar con slideToggle() con 'slow' con callback">
-
+                            <p name="demoPara"></p>
+                            <button onclick="addText()">Ejecutar</button>
                         </section>
                         <!--//section-->
 
                         <section class="docs-section" id="item-1-4">
-                            <h2 class="section-heading">Animate</h2>
-
-                            <p>Con animate se puede crear efectos de animación modificando propiedades propias de CSS
-                                que pertenecen a los elementos del DOM de un sitio web.</p>
-
-
+                            <h2 class="section-heading">DOM HTML</h2>
+                            <p>El HTML DOM le permite cambiar el contenido HTML utilizando la propiedad "innerHTML". El "innerHTML" se usa típicamente en páginas web para generar contenido HTML dinámico, como formularios de comentarios, formularios de registro y enlaces.</p>
                             <p>Sintaxis: <code>
-$(elemento).animate(propiedadesCSS,duracion,easing,callback)
+elemento.innerHTML = valor;
 </code></p>
-
-
-                            <h4 class="heading" style="padding-top:1%">Ejemplo 1</h4>
-
+                            <h4 class="heading" style="padding-top:1%">Ejemplo</h4>
                             <div class="docs-code-block">
-                                <pre class="shadow-lg rounded"><code class="javascript hljs">$(document).ready(function(){
-    $("#boton1").click(function(){
-        $("#paraanimar").animate({padding:"0px"});
-    });
-    $("#boton2").click(function(){
-        $("#paraanimar").animate({padding:"100px"});
-    });
-    $("#boton3").click(function(){
-        $("#paraanimar").animate({paddingBottom:"150px"},3000);
-    });
-    $("#boton4").click(function(){
-        $("#paraanimar").animate({paddingTop:"150px"},5000,function() {alert ('Efecto terminado!');});
-    });
-    $("#boton5").click(function(){
-        $("#paraanimar").animate({paddingLeft:"150px", paddingRight:"150px"});
-    });
-});
+                                <pre class="shadow-lg rounded"><code class="javascript hljs">function displayPhrase()
+{
+    document.getElementById("p1").innerHTML = "Este texto fue remplazado";
+}
 </code></pre>
-
                             </div>
                             <!--//docs-code-block-->
                             <h3>Demo</h3>
-                            <p>Texto 1</p>
-                            <hr>
-                            <p id="paraanimar" style="border:1px solid black;">Texto</p>
-
-                            <p>
-                                <hr>
-                                <input type="button" id="boton1" value="Resetear">
-                                <hr>
-                                <input type="button" id="boton2" value="Cambiar a 100px el margen interno del párrafo">
-                                <hr>
-                                <input type="button" id="boton3"
-                                    value="Cambiar a 150px el margen interno inferior del párrafo en 3 segundos">
-                                <hr>
-                                <input type="button" id="boton4"
-                                    value="Cambiar a 150px el margen interno superior del párrafo en 5 segundos y callback">
-                                <hr>
-                                <input type="button" id="boton5"
-                                    value="Cambiar a 150px el margen interno izquierdo e interno derecho del párrafo">
-                            </p>
-
-
-
+                            <p id="p1">Texto de prueba</p>
+                            <button type="button" onclick="displayPhrase()">Ejecutar</button>
                         </section>
                         <!--//section-->
                         <section class="docs-section" id="item-1-5">
-                            <h2 class="section-heading">stop</h2>
-                            <p>Stop es un método de jQuery que permite parar una animación o algún efecto una vez han
-                                empezado. En caso de que, por ejemplo, se llamó al efecto slideUp para desplazar un
-                                elemento hacia arriba, y se acciona el método stop, el elemento seguirá mostrándose,
-                                pero en la posición exacta dónde finalizó la animación sin reiniciarla. </p>
-                            <p>Sintaxis: <code>
-    $("p").stop(stopAll,goToEnd);
-    </code></p>
-
-
+                            <h2 class="section-heading">DOM FORMS</h2>
+                            <p>Con JavaScript es posible modificar los elementos de formularios HTML, utilizando el DOM. </p>
                             <h4 class="heading" style="padding-top:1%">Ejemplo 1</h4>
-
+                            <p> En este ejemplo se obtendrá el ID del formulario utilizando HTML DOM y mostrarlo en pantalla.
                             <div class="docs-code-block">
-                                <pre class="shadow-lg rounded"><code class="javascript hljs">$(document).ready(function()
-    {
-    $("#comenzarefectos").click(function(){
-        $("#funciones").slideUp(6000);
-        $("#funciones").slideDown(6000);
-    });
- 
-    $("#paratodo").click(function(){
-        $("#funciones").stop(true);
-    });
- 
-    $("#finalizaefectoactual").click(function(){
-        $("#funciones").stop(false,true);
-    });
-});
-
-
-$(document).ready(function()
-    {
-    var MiColaDeFunciones = $("#funciones");
- 
-    $("#botoncomenzarcola").click(function(){
-            MiColaDeFunciones.fadeOut(6000);
-            MiColaDeFunciones.fadeIn(6000);
-    });
- 
-    $("#botonstopcola").click(function(){
-        MiColaDeFunciones.stop();
-    });
-});
+                                <pre class="shadow-lg rounded"><code class="javascript hljs">function myGeeks() {
+            // Accessing form element.
+            var txt = document.getElementById(
+              "myForm").id;
+           
+            document.getElementById(
+              "Geek_p").innerHTML = txt;
+        }
 </code></pre>
-
                             </div>
                             <!--//docs-code-block-->
-                            <h3>Demo</h3>
-
-                            <div id="funciones"
-                                style="width:300px; height:80px; padding:20px;margin:2%; background-color: #303030; color:white;">
-                                En este rectángulo se harán los efectos</div>
-
-                            <input type="button" id="comenzarefectos" value="Comenzar efectos">
-                            <input type="button" id="paratodo" value="Detener efectos actuales">
-                            <input type="button" id="finalizaefectoactual"
-                                value="Finalizar efecto actual y realizar siguiente">
-
-                            <input type="button" id="botoncomenzarcola" value="Comenzar ejecución de la cola">
-                            <input type="button" id="botonstopcola" value="Parar ejecución de la cola actual">
-
-
-
+                            <h3>Demo</h3>               
+                            <form align="center"
+                                  id="myForm"
+                                  method="GET"
+                                  target="_blank"
+                                  action="/action_page.php">
+                                First name:
+                                <br>
+                                <input type="text"
+                                       name="fname"
+                                       placeholder="Nombre">
+                                <br>
+                                <br> Last name:
+                                <br>
+                                <input type="text"
+                                       name="lname"
+                                       placeholder="Apellido">
+                                <br>
+                                <br>
+                            </form>
+                            <button onclick="formsfuncion()">
+                                Submit
+                            </button>
+                            <p id="idformulario1"
+                               style="color:green;
+                                      font-size:30px;">
+                            </p>
 
                         </section>
                         <!--//section-->
                         <section class="docs-section" id="item-1-6">
-                            <h2 class="section-heading">Callback</h2>
+                            <h2 class="section-heading">DOM CSS</h2>
 
-                            <p>Las declaraciones de JavaScript se ejecutan línea por línea. Sin embargo, con los
-                                efectos, se puede ejecutar la siguiente línea de código aunque el efecto no haya
-                                finalizado. Esto puede crear errores. Para evitar esto, puede crear una función de
-                                devolución de llamada. Una función callback de llamada se ejecuta después de que
-                                finaliza el efecto actual. </p>
-                            <p>Sintaxis: <code>
-    $("p").efecto(speed, callback)
-    </code></p>
+                            <p>Modificar estilos CSS vía Javascript es una habilidad que debe tener todo desarrollador web que se precie. En este artículo repaso las diversas técnicas de manipulación del CSS, de un elemento HTML, o incluso de toda la página: </p>
+<pre>
+    Modificar una única propiedad CSS de un elemento.
+    Manipular el atributo class del elemento.
+    Técnicas avanzadas, como inyección de nodos style o el reemplazo de toda una hoja de estilos externa por otra distinta.
+</pre>
+<pre>
+                            <p>Cambiar una única propiedad CSS
+<p id="intro">Supongamos que, por algún motivo, se desea cambiar este párrafo a un color celeste</p></p>
+En JavaScript para cambiar el color de fondo se escribiría:
+var intro = document.getElementById('intro');
+intro.style.backgroundColor = '#FF00FF';
+</pre></p>
 
 
-                            <h4 class="heading" style="padding-top:1%">Ejemplo 1</h4>
+                            <h4 class="heading" style="padding-top:1%">Ejemplo</h4>
 
-                            <div class="docs-code-block">
-                                <pre class="shadow-lg rounded"><code class="javascript hljs">$(document).ready(function() {
-    $("#down05").click(function(event) {
-        $("#rectangulo").slideDown("fast", function() {
-            alert ('Efecto slideDown con velocidad fast terminado!');
-        });
-    });
-    $("#up05").click(function(event) {
-        $("#rectangulo").slideUp("slow", function() {
-            alert ('Efecto slideUp con velocidad slow terminado!');
-        });
-    });
-    $("#toggle05").click(function(event) {
-        $("#rectangulo").slideToggle("slow", function() {
-            alert ('Efecto slideToggle con velocidad slow terminado!');
-        });
-    });
-});
+                            <div class="docs-code-block" id="ejemplo">
+                                <pre class="shadow-lg rounded" ><code class="javascript hljs">
+&lta href="javascript:void(document.body.style.backgroundColor='yellow')">Cambia color del fondo</a> 
+&lta href="javascript:void(document.body.style.backgroundColor='#fff')">Color normal</a> 
+&lta href="javascript:void(document.getElementById('ejemplo').style.fontSize='20px')">Aumenta la fuente de esta sección</a>
+&lta href="javascript:void(document.getElementById('ejemplo').style.fontSize='16px')">Tamaño normal</a>
+&lta href="javascript:void(document.getElementById('ejemplo').style.backgroundColor='yellow')">Cambia color del fondo</a>
+&lta href="javascript:void(document.getElementById('ejemplo').style.backgroundColor='white')">Color normal</a>  
 </code></pre>
 
                             </div>
                             <!--//docs-code-block-->
                             <h3>Demo</h3>
-
-                            <div id="rectangulo6" style="padding:20px;margin:2%; background-color:#303030; color:#fff;">
-                                Rectángulo de ejemplo, que variará de opacidad</div>
-
-                            <input type="button" id="up05" value="Ocultar con slideUp() con 'slow' y callback">
-                            <input type="button" id="down05" value="Mostrar con slideDown() con 'fast' y callback">
-                            <input type="button" id="toggle05"
-                                value="Mostrar / ocultar con slideToggle() con 'slow' con callback">
+                            <div class="docs-code-block" id="ejemplo">
+                                <pre class="shadow-lg rounded" ><code class="javascript hljs">
+<a href="javascript:void(document.body.style.backgroundColor='yellow')">Cambia color del fondo</a> 
+<a href="javascript:void(document.body.style.backgroundColor='#fff')">Color normal</a> 
+<a href="javascript:void(document.getElementById('ejemplo').style.fontSize='20px')">Aumenta la fuente de esta sección</a>
+<a href="javascript:void(document.getElementById('ejemplo').style.fontSize='16px')">Tamaño normal</a>
+<a href="javascript:void(document.getElementById('ejemplo').style.backgroundColor='yellow')">Cambia color del fondo</a>
+<a href="javascript:void(document.getElementById('ejemplo').style.backgroundColor='white')">Color normal</a>  
+</code></pre>
                         </section>
                         <!--//section-->
                     </section>
                     <!--//section-->
-                    <section class="docs-section" id="item-1-7">
-                        <h2 class="section-heading">Chaining</h2>
-
-                        <p>Chaining es la técnica de aplicar una secuencia de efectos de jQuery, ejecutados en secuencia
-                            a un objeto del DOM de HTML. </p>
-                        <p>Sintaxis: <code>
-    $("p").efecto1().efecto2().efecto3();
-    </code></p>
-
-                        <h4 class="heading" style="padding-top:1%">Ejemplo 1</h4>
-                        <div class="docs-code-block">
-                            <pre class="shadow-lg rounded"><code class="javascript hljs">$(document).ready(function(){
-    $("#parrafo").hide(4000).show(4000).fadeOut(4000).fadeIn(4000).slideUp(4000).slideDown(4000);
-});
-</code></pre>
-
-                        </div>
-                        <!--//docs-code-block-->
-                        <h3>Demo</h3>
-                        <p id="parrafochain" style="background-color:#303030; color:#fff; padding:2%">Este párrafo será modificado por varios efectos.</p>
-                    </section>
-                    <!--//section-->
-                </article>
-                <article class="docs-article" id="section-2">
-                    <header class="docs-header">
-
-                        <!--//docs-intro-->
-                    </header>
+                    
                     <footer class="footer">
                         <div class="container text-center py-5">
                             <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
