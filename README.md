@@ -2,6 +2,7 @@
 ## Tema: Tarea Grupal
 ## Grupo 03
 ### Integrantes:
-Sebastian Falconi\\
+Sebastian Falconi
+
 Emilio Ñacato
 ### NRC: 8443
